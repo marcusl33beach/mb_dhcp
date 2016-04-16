@@ -6,6 +6,12 @@ package 'dhcp' do
   action :install
 end
 
+#start dhcpd
+service 'dhcps' do
+  supports :status => true
+  action [ :enable, :start ]
+end
+
 # Write out templates
 template '/etc/dhcp/dhcpd.conf' do
   source 'dhcpd.conf.erb'

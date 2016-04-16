@@ -4,4 +4,4 @@ DEPENDENCIES
     metadata: true
 
 GRAPH
-  mb_dhcp (0.1.0)
+  mb_dhcp (1.0.0)
