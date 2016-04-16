@@ -7,7 +7,7 @@ package 'dhcp' do
 end
 
 #start dhcpd
-service 'dhcps' do
+service 'dhcpd' do
   supports :status => true
   action [ :enable, :start ]
 end
