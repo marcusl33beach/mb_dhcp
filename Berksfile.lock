@@ -1,0 +1,7 @@
+DEPENDENCIES
+  mb_dhcp
+    path: .
+    metadata: true
+
+GRAPH
+  mb_dhcp (0.1.0)

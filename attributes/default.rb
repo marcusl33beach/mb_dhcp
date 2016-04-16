@@ -1,0 +1,9 @@
+default['dhcp']['domain_name'] = ''
+default['dhcp']['domain_name_servers'] = []
+default['dhcp']['lease_time'] = ''
+default['dhcp']['max_lease'] = ''
+default['dhcp']['subnet'] = ''
+default['dhcp']['netmask'] = ''
+default['dhcp']['range'] = []
+default['dhcp']['broadcast'] = ''
+default['dhcp']['routers'] = ''

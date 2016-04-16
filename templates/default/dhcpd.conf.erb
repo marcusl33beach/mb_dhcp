@@ -1,0 +1,25 @@
+#specify domain name
+option domain-name "<%= @domanename %>";
+
+#specify DNS server ip and additional DNS server ip
+<% @domainnameservers.each do |domainnameserver| -%>
+option domain-name-servers <%= puts domainnameserver %>;
+<% end %>
+
+#specify default lease time
+default-lease-time <%= @leasetime %>;
+
+#specify Max lease time
+max-lease-time <%= @maxlease %>;
+
+#specify log method
+log-facility local7;
+
+#Configuring subnet and iprange
+subnet <%= @subnet %> netmask <%= @netmask %> {
+range <%= @range %>;
+option broadcast-address <%= @broadcast %>;
+
+#Default gateway ip
+option routers <%= @routers %>;
+}
