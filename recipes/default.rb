@@ -8,7 +8,6 @@ end
 
 #start dhcpd
 service 'dhcpd' do
-  supports :status => true
   action [ :enable, :start ]
 end
 
