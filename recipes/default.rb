@@ -6,11 +6,6 @@ package 'dhcp' do
   action :install
 end
 
-#start dhcpd
-service 'dhcpd' do
-  action [ :enable, :start ]
-end
-
 # Write out templates
 template '/etc/dhcp/dhcpd.conf' do
   source 'dhcpd.conf.erb'
@@ -29,4 +24,10 @@ template '/etc/dhcp/dhcpd.conf' do
     :routers => node['dhcp']['routers']
   })
   notifies :restart, 'service[dhcpd]'
+end
+
+#start dhcpd
+service 'dhcpd' do
+  supports :status => true
+  action [ :enable, :start ]
 end
