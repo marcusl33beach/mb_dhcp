@@ -2,7 +2,7 @@
 option domain-name "<%= @domanename %>";
 
 #specify DNS server ip and additional DNS server ip
-option domain-name-servers "<% @domainnameservers.each do |domainnameserver| %><%= domainnameserver %><% end %>"
+option domain-name-servers <% @domainnameservers.each do |domainnameserver| %><%= domainnameserver %><% end %>;
 
 #specify default lease time
 default-lease-time <%= @leasetime %>;
